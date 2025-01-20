@@ -12,7 +12,7 @@
     "build-storybook": "storybook build",
     "lint": "eslint .",
     "package": "svelte-package",
-    "publish": "npm instaall && npm run package && npm publish --access public"
+    "publish": "npm install && npm run package && npm publish --access public"
   },
   "files": [
     "dist",
