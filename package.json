@@ -10,7 +10,8 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "publish": "npm run package && npm publish --access public"
   },
   "files": [
     "dist",
@@ -27,13 +28,13 @@
     "Svelte",
     "sveltekit"
   ],
-  "homepage": "",
+  "homepage": "https://github.com/Taberin/Taberin-UI",
   "license": "MIT",
   "author": {
     "name": "Yoza Wiratama",
     "url": "https://linkedin.com/in/yozawiratama"
   },
-  "repository": "",
+  "repository": "https://github.com/Taberin/Taberin-UI",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
