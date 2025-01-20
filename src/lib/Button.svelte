@@ -1,5 +1,7 @@
 <script lang="ts">
-    let {label}: {label: string} = $props()
+    let { type, disabled }: { type: "button" | "submit" | "reset" | null | undefined; disabled: boolean } = $props();
 </script>
 
-<button>{label}</button>
+<button class="ui button" {type} {disabled}>
+    <slot></slot>
+</button>

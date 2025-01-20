@@ -32,13 +32,22 @@
     "Svelte",
     "sveltekit"
   ],
+  "title": "Taberin UI",
+  "description": "Semantic Component",
   "homepage": "https://github.com/Taberin/Taberin-UI",
   "license": "MIT",
   "author": {
     "name": "Yoza Wiratama",
-    "url": "https://linkedin.com/in/yozawiratama"
+    "url": "https://linkedin.com/in/yozawiratama",
+    "email": "yoza.wiratama@gmail.com"
   },
-  "repository": "https://github.com/Taberin/Taberin-UI",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Taberin/Taberin-UI"
+  },
+  "bugs": {
+    "url": "https://github.com/Semantic-Org/Semantic-UI/issues"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
