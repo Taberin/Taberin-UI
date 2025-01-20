@@ -11,7 +11,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "lint": "eslint .",
-    "publish": "npm run package && npm publish --access public"
+    "package": "svelte-package",
+    "publish": "npm instaall && npm run package && npm publish --access public"
   },
   "files": [
     "dist",
@@ -57,7 +58,7 @@
     "@storybook/test": "^8.5.0",
     "@sveltejs/adapter-auto": "^4.0.0",
     "@sveltejs/kit": "^2.0.0",
-    "@sveltejs/package": "^2.0.0",
+    "@sveltejs/package": "^2.3.7",
     "@sveltejs/vite-plugin-svelte": "^4.0.0",
     "eslint": "^9.18.0",
     "eslint-plugin-svelte": "^2.46.1",
