@@ -38,8 +38,10 @@ The following is a list of planned components based on Semantic UI. Completed co
 - ✅ **Container**: Container limits content to a maximum width.
 - ✅ **Divider**: Divider visually segments content into groups.
 - ✅ **Header**: Header provides a short summary of content.
+- ✅ **Image**: Image is a graphic representation of something.
+- ✅ **Loader**: Loading indicators for pages or specific elements.
 - ⬜ **Flag**: Flag is used to represent a political state.
-- ⬜ **Input**: Text input fields with optional styles and icons.
+- ✅ **Input**: Text input fields with optional styles and icons.
 - ⬜ **Dropdown**: Dropdown menus with multiple options.
 - ⬜ **Checkbox**: Checkboxes with customizable styles.
 - ⬜ **Modal**: Modal dialog components.

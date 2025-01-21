@@ -4,10 +4,13 @@
     import IconButton from "$lib/IconButton.svelte";
     import Header from "$lib/Header.svelte";
     import Image from "$lib/Image.svelte";
+    import Input from "$lib/Input.svelte";
 
     function handleClick(event: { detail: any }) {
         console.log("Click event:", event.detail); // { state, timestamp }
     }
+
+    let text = "Initial value";
 </script>
 
 <Button
@@ -15,7 +18,7 @@
     icon="loading spinner"
     color="blue"
     iconPosition="right"
-    onclick={handleClick}
+    onClick={handleClick}
     >Press Me!
 </Button>
 
@@ -27,7 +30,7 @@
     color="teal"
     href="https://google.com"
     target="_blank"
-    onclick={handleClick}
+    onClick={handleClick}
 />
 
 <Header>
@@ -41,3 +44,6 @@
 </Header>
 
 <Image src="https://placehold.co/600x400" alt="Example image" circular />
+
+<Input placeholder="Enter text..." bind:value={text} icon="search" />
+<p>You entered: {text}</p>

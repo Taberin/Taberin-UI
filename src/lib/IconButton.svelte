@@ -16,8 +16,8 @@
         href = null,
         target = null,
         ariaLabel = "button",
-        onclick = null,
-        ondblclick = null
+        onClick: onclick = null,
+        onDoubleClick: ondblclick = null
     }: IconButtonType = $props();
 
     let classNames = [

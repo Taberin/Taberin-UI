@@ -6,6 +6,7 @@ import Divider from "./Divider.svelte";
 import Header from "./Header.svelte";
 import SubHeader from "./SubHeader.svelte";
 import Image from "./Image.svelte";
+import Input from "./Input.svelte";
 
 
-export { Button, IconButton, Container, Divider, Header, SubHeader, Image }
+export { Button, IconButton, Container, Divider, Header, SubHeader, Image, Input }

@@ -73,8 +73,8 @@ export interface BaseButtonType {
     /**
      * Event Handlers
      */
-    onclick?: ((event: MouseEvent) => void) | null;
-    ondblclick?: ((event: MouseEvent) => void) | null;
+    onClick?: ((event: MouseEvent) => void) | null;
+    onDoubleClick?: ((event: MouseEvent) => void) | null;
 }
 
 export interface ButtonType extends BaseButtonType {
@@ -159,4 +159,23 @@ export interface ImageType {
     inline?: boolean; // Aligns the image inline
     customClass?: string; // Additional custom classes
     styles?: string; // Inline styles
+}
+
+export interface InputType {
+    type?: string; // Input type (e.g., text, password, email)
+    placeholder?: string; // Placeholder text for the input
+    value?: string; // Input value
+    disabled?: boolean; // Disables the input field
+    loading?: boolean; // Adds the "loading" class
+    icon?: string | null; // Icon for the input
+    iconPosition?: "left" | "right"; // Position of the icon
+    fluid?: boolean; // Makes the input fluid (full-width)
+    inverted?: boolean; // Adds the "inverted" class
+    size?: "mini" | "tiny" | "small" | "medium" | "large" | "big" | "huge" | "massive" | null; // Size of the input
+    error?: boolean; // Highlights the input in red for error
+    transparent?: boolean; // Adds the "transparent" class
+    customClass?: string; // Additional custom classes
+    styles?: string; // Inline styles
+    onInput?: ((event: InputEvent) => void) | null; // Event handler for input
+    onChange?: ((event: Event) => void) | null; // Event handler for change
 }
