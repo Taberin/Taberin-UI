@@ -15,7 +15,7 @@
     "version:major": "npm version major",
     "lint": "eslint .",
     "package": "svelte-package",
-    "publish": "npm install && npm run package && npm publish --access public"
+    "pp": "npm install && npm run package && npm publish --access public"
   },
   "files": [
     "dist",
