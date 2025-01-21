@@ -21,32 +21,71 @@
     export let float: "right" | "left" | null | undefined = null;
     export let compact: boolean = false;
     export let fluid: boolean = false;
+    export let icon: string | null | undefined = null;
+    export let iconPosition: "left" | "right" | null | undefined = "left";
 
-    export let onclick: MouseEventHandler<HTMLButtonElement> | null = null;
-    export let ondblclick: MouseEventHandler<HTMLButtonElement> | null = null;
+    /**
+     * Link Button
+     */
+    export let href: string | null | undefined = null;
+    export let target:
+        | "_self"
+        | "_blank"
+        | "_parent"
+        | "_top"
+        | "_unfencedTop"
+        | null
+        | undefined = null;
+
+    export let onclick: ((event: MouseEvent) => void) | null = null;
+    export let ondblclick: ((event: MouseEvent) => void) | null = null;
+
+    if (!iconPosition) iconPosition = "left";
 
     let classNames = [
         "ui",
         color,
-        basic ? "basic" : "",
-        inverted ? "inverted" : "",
+        basic && "basic",
+        inverted && "inverted",
         state,
-        float ? `${float} floated` : "",
-        compact ? "compact" : "",
-        fluid ? "fluid" : "",
+        float && `${float} floated`,
+        compact && "compact",
+        fluid && "fluid",
         size,
+        icon && `${iconPosition !== "left" ? "right" : ""} labeled icon`,
         "button",
     ]
         .filter(Boolean)
         .join(" ");
+
+    if (href && !target) target = "_self";
 </script>
 
-<button
-    class={classNames}
-    type={type || undefined}
-    {disabled}
-    {onclick}
-    {ondblclick}
->
-    <slot></slot>
-</button>
+{#if href}
+    <a class={classNames} {href} target={target || "_self"}>
+        {#if icon}
+            <i class={`${icon} icon`}></i>
+        {/if}
+        <slot></slot>
+        {#if icon && iconPosition === "right"}
+            <i class={`right icon`}></i>
+        {/if}
+    </a>
+{:else}
+    <button
+        class={classNames}
+        type={type || undefined}
+        {disabled}
+        aria-disabled={disabled}
+        {onclick}
+        {ondblclick}
+    >
+        {#if icon}
+            <i class={`${icon} icon`}></i>
+        {/if}
+        <slot></slot>
+        {#if icon && iconPosition === "right"}
+            <i class={`right icon`}></i>
+        {/if}
+    </button>
+{/if}
