@@ -1,14 +1,40 @@
 <script lang="ts">
-    import type { MouseEventHandler } from "svelte/elements";
     import type { colorType } from "../types/types.js";
 
+    /**
+     * The type of button element: button, submit, or reset.
+     */
     export let type: "button" | "submit" | "reset" = "button";
+
+    /**
+     * Determines if the button is disabled.
+     */
     export let disabled: boolean = false;
+
+    /**
+     * The color of the button (based on Semantic UI colors).
+     */
     export let color: colorType = null;
+
+    /**
+     * Whether the button has a basic style.
+     */
     export let basic: boolean = false;
+
+    /**
+     * Whether the button has a inverted style.
+     */
     export let inverted: boolean = false;
+
+    /**
+     * Add state class for button style.
+     */
     export let state: "active" | "disabled" | "loading" | null | undefined =
         null;
+
+    /**
+     * A button can have different sizes
+     */
     export let size:
         | "mini"
         | "tiny"
@@ -18,9 +44,25 @@
         | "big"
         | "huge"
         | "massive" = "medium";
-    export let float: "right" | "left" | null | undefined = null;
+
+    /**
+     * A button can be aligned to the left or right of its container
+     */
+    export let floated: "right" | "left" | null | undefined = null;
+
+    /**
+     * A button can reduce its padding to fit into tighter spaces
+     */
     export let compact: boolean = false;
+
+    /**
+     * A button can take the width of its container
+     */
     export let fluid: boolean = false;
+
+    /**
+     * A button can have only an icon
+     */
     export let icon: string | null | undefined = null;
     export let iconPosition: "left" | "right" | null | undefined = "left";
 
@@ -48,7 +90,7 @@
         basic && "basic",
         inverted && "inverted",
         state,
-        float && `${float} floated`,
+        floated && `${floated} floated`,
         compact && "compact",
         fluid && "fluid",
         size,
@@ -59,10 +101,14 @@
         .join(" ");
 
     if (href && !target) target = "_self";
+
+    if (state && !["active", "disabled", "loading"].includes(state)) {
+        throw new Error(`Invalid state: ${state}`);
+    }
 </script>
 
 {#if href}
-    <a class={classNames} {href} target={target || "_self"}>
+    <a class={classNames} {href} target={target || "_self"} role="button">
         {#if icon}
             <i class={`${icon} icon`}></i>
         {/if}
