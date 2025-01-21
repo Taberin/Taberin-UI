@@ -3,6 +3,7 @@
     import Button from "$lib/Button.svelte";
     import IconButton from "$lib/IconButton.svelte";
     import Header from "$lib/Header.svelte";
+    import Image from "$lib/Image.svelte";
 
     function handleClick(event: { detail: any }) {
         console.log("Click event:", event.detail); // { state, timestamp }
@@ -38,3 +39,5 @@
         </div>
     </div>
 </Header>
+
+<Image src="https://placehold.co/600x400" alt="Example image" circular />

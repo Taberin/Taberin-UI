@@ -144,3 +144,19 @@ export interface SubHeaderType {
     styles?: string; // Inline styles
     children?: Snippet; // Header content
 }
+
+export interface ImageType {
+    src?: string; // Image source
+    alt?: string; // Alt text for the image
+    size?: "mini" | "tiny" | "small" | "medium" | "large" | "big" | "huge" | "massive" | null; // Image size
+    avatar?: boolean; // Adds the "avatar" class
+    bordered?: boolean; // Adds the "bordered" class
+    rounded?: boolean; // Adds the "rounded" class
+    circular?: boolean; // Adds the "circular" class
+    centered?: boolean; // Centers the image
+    floated?: "left" | "right" | null; // Floats the image to left or right
+    fluid?: boolean; // Makes the image fluid
+    inline?: boolean; // Aligns the image inline
+    customClass?: string; // Additional custom classes
+    styles?: string; // Inline styles
+}
