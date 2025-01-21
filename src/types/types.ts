@@ -91,3 +91,7 @@ export interface ButtonType extends BaseButtonType {
 export interface IconButtonType extends BaseButtonType {
     
 }
+
+export interface LabeledButtonType extends BaseButtonType {
+    
+}

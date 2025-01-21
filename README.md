@@ -1,58 +1,78 @@
-# create-svelte
+# Taberin UI
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+**Taberin UI** is a Svelte component library built on top of **Semantic UI**. This library is designed to help you quickly build user interfaces with consistent styles and components.
 
-Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
+## Installation
 
-## Creating a project
+1. Install **Taberin UI** via npm:
 
-If you're seeing this, you've probably already done this step. Congrats!
+   ```bash
+   npm install taberin-ui
+   
+   ```
 
-```bash
-# create a new project in the current directory
-npx sv create
+2. Install **Semantic UI CSS** as a dependency:
 
-# create a new project in my-app
-npx sv create my-app
+   ```bash
+   npm install semantic-ui-css
+   
+   ```
+
+3. Import **Semantic UI CSS** into your application's entry point (e.g., `main.js` or `App.svelte`):
+
+   ```javascript
+   import 'semantic-ui-css/semantic.min.css';
+   
+   ```
+
+---
+
+## Component Checklist
+
+The following is a list of planned components based on Semantic UI. Completed components are marked with ✅:
+
+- ✅ **Button**: Buttons with various styles and sizes.
+- ✅ **IconButton**: Buttons with icons.
+- ⬜ **LabeledButton**: Button can appear alongside a label. 
+- ⬜ **Input**: Text input fields with optional styles and icons.
+- ⬜ **Dropdown**: Dropdown menus with multiple options.
+- ⬜ **Checkbox**: Checkboxes with customizable styles.
+- ⬜ **Modal**: Modal dialog components.
+- ⬜ **Card**: Cards for displaying content like images, text, and buttons.
+- ⬜ **Menu**: Navigation menus with different styles.
+- ⬜ **Table**: Tables with headers, footers, and layout variations.
+- ⬜ **Loader**: Loading indicators for pages or specific elements.
+
+---
+
+## Basic Usage
+
+### Example: Button
+
+```svelte
+<script>
+    import { Button } from 'taberin-ui';
+</script>
+
+<Button color="blue" size="large">Click Me</Button>
 ```
 
-## Developing
+### Example: IconButton
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+```svelte
+<script>
+    import { IconButton } from 'taberin-ui';
+</script>
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+<IconButton icon="plus" ariaLabel="Add Item" />
 ```
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+---
 
-## Building
+## License
 
-To build your library:
+This project is licensed under the [MIT License](https://chatgpt.com/c/LICENSE).
 
-```bash
-npm run package
-```
+---
 
-To create a production version of your showcase app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
-```
+Feel free to ask if you need further assistance! 🚀
