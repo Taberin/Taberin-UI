@@ -83,15 +83,64 @@ export interface ButtonType extends BaseButtonType {
      */
     iconPosition?: "left" | "right" | null;
 
-    
+
     children: Snippet;
 }
 
 
 export interface IconButtonType extends BaseButtonType {
-    
+
 }
 
 export interface LabeledButtonType extends BaseButtonType {
-    
+
+}
+
+export interface ContainerType {
+    text?: boolean; // Adds the "text" class
+    fluid?: boolean; // Adds the "fluid" class
+    aligned?: "left" | "center" | "right" | null; // Alignment of content
+    customClass?: string; // Additional custom classes
+    styles?: string; // Inline styles
+    children: Snippet;
+}
+
+export interface DividerType {
+    horizontal?: boolean; // Adds the "horizontal" class
+    vertical?: boolean; // Adds the "vertical" class
+    inverted?: boolean; // Adds the "inverted" class
+    fitted?: boolean; // Removes spacing for the divider
+    hidden?: boolean; // Hides the divider visually
+    section?: boolean; // Adds space above and below
+    clearing?: boolean; // Ensures content above does not sit next to the divider
+    customClass?: string; // Additional custom classes
+    styles?: string; // Inline styles
+    children: Snippet;
+}
+
+export interface HeaderType {
+    type?: "page" | "content" | "sub" | null;
+    size?: "huge" | "large" | "medium" | "small" | "tiny" | null; // Header size
+    level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | null;
+    inverted?: boolean; // Adds the "inverted" class for dark backgrounds
+    dividing?: boolean; // Adds the "dividing" class
+    block?: boolean; // Adds the "block" class
+    attached?: "top" | "bottom" | null; // Adds "top attached" or "bottom attached" class
+    floated?: "right" | "left" | null; // Adds "right floated" or "left floated" class
+    aligned?: "right" | "left" | "center" | null; // Aligns the header content
+
+    /**
+     * A button can have only an icon.
+     */
+    icon?: string | null;
+
+    customClass?: string; // Additional custom classes
+    styles?: string; // Inline styles
+    children?: Snippet; // Header content
+}
+
+export interface SubHeaderType {
+    customClass?: string; // Additional custom classes
+    styles?: string; // Inline styles
+    children?: Snippet; // Header content
 }

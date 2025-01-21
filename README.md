@@ -34,6 +34,11 @@ The following is a list of planned components based on Semantic UI. Completed co
 - ✅ **Button**: Buttons with various styles and sizes.
 - ✅ **IconButton**: Buttons with icons.
 - ⬜ **LabeledButton**: Button can appear alongside a label. 
+- ⬜ **ButtonGroup**: Buttons in one group.
+- ✅ **Container**: Container limits content to a maximum width.
+- ✅ **Divider**: Divider visually segments content into groups.
+- ⬜ **Header**: Header provides a short summary of content.
+- ⬜ **Flag**: Flag is used to represent a political state.
 - ⬜ **Input**: Text input fields with optional styles and icons.
 - ⬜ **Dropdown**: Dropdown menus with multiple options.
 - ⬜ **Checkbox**: Checkboxes with customizable styles.

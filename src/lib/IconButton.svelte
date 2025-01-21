@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { IconButtonType } from "../types/types.js";
+    import type { IconButtonType } from "../types/types.ts";
 
     let {
         type = "button",
