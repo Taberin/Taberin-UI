@@ -179,3 +179,27 @@ export interface InputType {
     onInput?: ((event: InputEvent) => void) | null; // Event handler for input
     onChange?: ((event: Event) => void) | null; // Event handler for change
 }
+
+
+export interface MessageType {
+    header?: string; // Header text for the message
+    content?: string | null; // Content text for the message
+    icon?: string | null; // Icon for the message
+    size?: "mini" | "tiny" | "small" | "large" | "big" | "huge" | "massive"; // Size of the message
+    color?: "red" | "orange" | "yellow" | "olive" | "green" | "teal" | "blue" | "violet" | "purple" | "pink" | "brown" | "grey" | "black"; // Color of the message
+    compact?: boolean; // Adds the "compact" class
+    floating?: boolean; // Adds the "floating" class
+    attached?: "top" | "bottom" | null; // Adds the "attached" class
+    inverted?: boolean; // Adds the "inverted" class
+    warning?: boolean; // Adds the "warning" class
+    positive?: boolean; // Adds the "positive" class
+    negative?: boolean; // Adds the "negative" class
+    error?: boolean; // Adds the "error" class
+    info?: boolean; // Adds the "info" class
+    hidden?: boolean; // Adds the "hidden" class
+    visible?: boolean; // Adds the "visible" class
+    dismissable?: boolean; // Enables dismiss button
+    customClass?: string; // Additional custom classes
+    styles?: string; // Inline styles
+    onDismiss?: (() => void) | null; // Event handler for dismiss button
+}

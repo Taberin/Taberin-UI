@@ -42,6 +42,7 @@ The following is a list of planned components based on Semantic UI. Completed co
 - ✅ **Loader**: Loading indicators for pages or specific elements.
 - ⬜ **Flag**: Flag is used to represent a political state.
 - ✅ **Input**: Text input fields with optional styles and icons.
+- ✅ **Message**: Message displays information that expplains nearby content.
 - ⬜ **Dropdown**: Dropdown menus with multiple options.
 - ⬜ **Checkbox**: Checkboxes with customizable styles.
 - ⬜ **Modal**: Modal dialog components.

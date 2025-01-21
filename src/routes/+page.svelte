@@ -5,12 +5,18 @@
     import Header from "$lib/Header.svelte";
     import Image from "$lib/Image.svelte";
     import Input from "$lib/Input.svelte";
+    import Message from "$lib/Message.svelte";
 
     function handleClick(event: { detail: any }) {
         console.log("Click event:", event.detail); // { state, timestamp }
     }
 
     let text = "Initial value";
+
+    let visible = true;
+    const handleDismiss = () => {
+        visible = false;
+    };
 </script>
 
 <Button
@@ -47,3 +53,7 @@
 
 <Input placeholder="Enter text..." bind:value={text} icon="search" />
 <p>You entered: {text}</p>
+
+{#if visible}
+    <Message header="Notice" content={text} dismissable onDismiss={handleDismiss} />
+{/if}
