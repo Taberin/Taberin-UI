@@ -17,7 +17,7 @@
     onclick={handleClick}>Press Me! </Button
 >
 
-<Button href="https://google.com" target="_blank">Link</Button>
+<Button href="https://google.com" target="_blank">Link To Google</Button>
 
 <IconButton
     type="button"
