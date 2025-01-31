@@ -5,7 +5,6 @@
     let {
         header = null,
         content = null,
-        icon = null,
         size = null,
         color = null,
         compact = false,
@@ -55,16 +54,12 @@
 
 <div class={classNames} style={styles}>
     {#if dismissable}
-        <i class="close icon" on:click={handleDismiss} />
+        <!-- svelte-ignore a11y_click_events_have_key_events -->
+        <!-- svelte-ignore a11y_no_static_element_interactions -->
+        <i class="close icon" onclick={handleDismiss}></i>
     {/if}
-    {#if icon}
-        <i class={`${icon} icon`}></i>
-    {/if}
-    {#if header}
-        <div class="header">{header}</div>
-    {/if}
-    {#if content}
-        <p>{content}</p>
-    {/if}
-    <slot />
+    <div class="header">{header}</div>
+    <p>
+        {content}
+    </p>
 </div>

@@ -2,10 +2,10 @@
     import "semantic-ui-css/semantic.min.css";
     import Button from "$lib/Button.svelte";
     import IconButton from "$lib/IconButton.svelte";
-    import Header from "$lib/Header.svelte";
+    import Header from "$lib/components/headers/Header.svelte";
     import Image from "$lib/Image.svelte";
     import Input from "$lib/Input.svelte";
-    import Message from "$lib/Message.svelte";
+    import Placeholder from "$lib/Placeholder.svelte";
 
     function handleClick(event: { detail: any }) {
         console.log("Click event:", event.detail); // { state, timestamp }
@@ -54,6 +54,5 @@
 <Input placeholder="Enter text..." bind:value={text} icon="search" />
 <p>You entered: {text}</p>
 
-{#if visible}
-    <Message header="Notice" content={text} dismissable onDismiss={handleDismiss} />
-{/if}
+
+<Placeholder content={[{ type: "line", count: 3 }]} />

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { HeaderType } from "../types/types.ts";
+    import type { HeaderType } from "../../../types/types.js";
 
     // Destructure props from $props()
     let {

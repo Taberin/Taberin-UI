@@ -136,13 +136,20 @@ export interface HeaderType {
 
     customClass?: string; // Additional custom classes
     styles?: string; // Inline styles
-    children?: Snippet; // Header content
+    children: Snippet; // Header content
+}
+
+export interface IconHeaderType extends HeaderType {
+    icon: string;
+    content?: string | null;
+    sub?: string | null;
 }
 
 export interface SubHeaderType {
+
     customClass?: string; // Additional custom classes
     styles?: string; // Inline styles
-    children?: Snippet; // Header content
+    children: Snippet; // Header content
 }
 
 export interface ImageType {
@@ -181,12 +188,9 @@ export interface InputType {
 }
 
 
-export interface MessageType {
-    header?: string; // Header text for the message
-    content?: string | null; // Content text for the message
-    icon?: string | null; // Icon for the message
-    size?: "mini" | "tiny" | "small" | "large" | "big" | "huge" | "massive"; // Size of the message
-    color?: "red" | "orange" | "yellow" | "olive" | "green" | "teal" | "blue" | "violet" | "purple" | "pink" | "brown" | "grey" | "black"; // Color of the message
+export interface BaseMessageType {
+    size?: "mini" | "tiny" | "small" | "large" | "big" | "huge" | "massive" | null; // Size of the message
+    color?: "red" | "orange" | "yellow" | "olive" | "green" | "teal" | "blue" | "violet" | "purple" | "pink" | "brown" | "grey" | "black" | null; // Color of the message
     compact?: boolean; // Adds the "compact" class
     floating?: boolean; // Adds the "floating" class
     attached?: "top" | "bottom" | null; // Adds the "attached" class
@@ -202,4 +206,59 @@ export interface MessageType {
     customClass?: string; // Additional custom classes
     styles?: string; // Inline styles
     onDismiss?: (() => void) | null; // Event handler for dismiss button
+}
+
+export interface CustomMessageType extends BaseMessageType {
+    children: Snippet;
+}
+
+export interface MessageType extends BaseMessageType {
+    header?: string | null; // Header text for the message
+    content?: string | null; // Content text for the message
+}
+
+export interface ListMessageType extends BaseMessageType {
+    header?: string | null; // Header text for the message
+    items: string[]; // Content text for the message
+}
+
+export interface IconMessageType extends MessageType {
+    icon?: string | null; // Icon for the message
+    loading?: boolean | null;
+}
+
+export interface PlaceholderType {
+    fluid?: boolean; // Adds the "fluid" class
+    inverted?: boolean; // Adds the "inverted" class
+    customClass?: string; // Additional custom classes
+    styles?: string; // Inline styles
+    content?: Array<PlaceholderContent>; // Placeholder content (rows, headers, lines, etc.)
+}
+
+export interface PlaceholderContent {
+    type: "header" | "paragraph" | "line" | "image"; // Type of placeholder
+    count?: number; // Number of lines or placeholders (default: 1)
+}
+
+export interface MenuType {
+    vertical?: boolean; // Adds the "vertical" class
+    secondary?: boolean; // Adds the "secondary" class
+    pointing?: boolean; // Adds the "pointing" class
+    tabular?: boolean; // Adds the "tabular" class
+    fluid?: boolean; // Makes the menu fluid
+    compact?: boolean; // Adds the "compact" class
+    inverted?: boolean; // Adds the "inverted" class
+    size?: "mini" | "tiny" | "small" | "medium" | "large" | "big" | "huge" | "massive"; // Size of the menu
+    customClass?: string; // Additional custom classes
+    styles?: string; // Inline styles
+    items?: MenuItemType[]; // Array of menu items
+    activeItem?: string; // Key of the active menu item
+    onItemClick?: (key: string) => void; // Event handler when a menu item is clicked
+}
+
+export interface MenuItemType {
+    key: string; // Unique key for the menu item
+    content: string; // Text or content of the menu item
+    icon?: string; // Optional icon for the menu item
+    disabled?: boolean; // If true, the menu item is disabled
 }
