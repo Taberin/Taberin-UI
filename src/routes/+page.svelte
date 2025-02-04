@@ -1,6 +1,6 @@
 <script lang="ts">
     import "semantic-ui-css/semantic.min.css";
-    import Button from "$lib/Button.svelte";
+    import Button from "$lib/components/button/Button.svelte";
     import IconButton from "$lib/IconButton.svelte";
     import Header from "$lib/components/headers/Header.svelte";
     import Image from "$lib/Image.svelte";

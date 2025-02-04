@@ -8,8 +8,9 @@
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"sourceMap": true,
+		"noImplicitAny": true,
 		"strict": true,
-		"module": "NodeNext",
-		"moduleResolution": "NodeNext"
+		"module": "ESNext",
+		"moduleResolution": "node"
 	}
 }

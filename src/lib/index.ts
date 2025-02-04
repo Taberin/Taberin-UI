@@ -1,5 +1,5 @@
 // Reexport your entry components here
-import Button from "./Button.svelte";
+import Button from "./components/button/Button.svelte";
 import IconButton from "./IconButton.svelte";
 import Container from "./Container.svelte";
 import Divider from "./Divider.svelte";
