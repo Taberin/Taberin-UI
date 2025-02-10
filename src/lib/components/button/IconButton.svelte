@@ -9,12 +9,14 @@
         basic = false,
         inverted = false,
         state = null,
-        size = "medium",
+        size= null,
         floated = null,
         compact = false,
         icon,
-        position: iconPosition = "left",
+        position = "left",
         fluid = false,
+        circular = false,
+        customClass = "",
         href = null,
         target = null,
         ariaLabel = "button",
@@ -26,14 +28,43 @@
     if (!icon) {
         throw new Error(`icon is required`);
     }
+
+    customClass = `icon  ${customClass}`;
+
+    customClass = [
+        "icon",
+        circular && "circular",
+        customClass,
+    ]
+        .filter(Boolean)
+        .join(" ");
 </script>
 
-<Button {type} {disabled} {color} {basic} {inverted} {state} {size} {floated} {compact} {fluid} {href} {target} {ariaLabel} {onClick} {onDoubleClick} >
-    {#if icon}
+<Button
+    {type}
+    {disabled}
+    {color}
+    {basic}
+    {inverted}
+    {state}
+    {size}
+    {floated}
+    {compact}
+    {fluid}
+    {customClass}
+    {href}
+    {target}
+    {ariaLabel}
+    {onClick}
+    {onDoubleClick}
+>
+    {#if icon && position === "left"}
         <i class={`${icon} icon`}></i>
     {/if}
-    {@render children()}
-    {#if icon && iconPosition === "right"}
-        <i class={`right icon`}></i>
+    {#if children}
+        {@render children()}
+    {/if}
+    {#if icon && position === "right"}
+        <i class={`${icon} icon`}></i>
     {/if}
 </Button>

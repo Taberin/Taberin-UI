@@ -37,7 +37,7 @@ export interface ButtonProps {
     /**
      * A button can have different sizes.
      */
-    size?: ButtonSizeType;
+    size?: ButtonSizeType | null;
     /**
      * A button can be aligned to the left or right of its container.
      */
@@ -50,6 +50,9 @@ export interface ButtonProps {
      * A button can take the width of its container.
      */
     fluid?: boolean;
+
+    customClass?: string | null;
+
     /**
      * Link Button.
      */
@@ -69,12 +72,13 @@ export interface ButtonProps {
     /**
      * Slot or children of component
      */
-    children: Snippet;
+    children?: Snippet | null;
 }
 
 export interface IconButtonProps extends ButtonProps {
     icon: string;
     position?: "left" | "right" | null;
+    circular?: boolean | null;
 }
 
 export interface ButtonsProps {
