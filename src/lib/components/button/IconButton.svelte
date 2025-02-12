@@ -4,7 +4,6 @@
 
     let {
         type = "button",
-        disabled = false,
         labeled = false,
         color = null,
         basic = false,
@@ -30,6 +29,8 @@
         throw new Error(`icon is required`);
     }
 
+    
+
     customClass = `icon  ${customClass}`;
 
     customClass = [
@@ -44,7 +45,6 @@
 
 <Button
     {type}
-    {disabled}
     {color}
     {basic}
     {inverted}

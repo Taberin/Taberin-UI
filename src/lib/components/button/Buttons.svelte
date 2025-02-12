@@ -9,7 +9,7 @@
         labeled = null,
         columns = null,
         color = null,
-        size = "medium",
+        size = null,
         children,
     }: ButtonsProps = $props();
 
@@ -23,7 +23,7 @@
         vertical && "vertical",
         labeled && "labeled",
         size,
-        "button",
+        "buttons",
     ]
         .filter(Boolean)
         .join(" ");

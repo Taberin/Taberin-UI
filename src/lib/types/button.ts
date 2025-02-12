@@ -11,10 +11,6 @@ export interface ButtonProps {
      */
     type?: "button" | "submit" | "reset";
     /**
-     * Determines if the button is disabled.
-     */
-    disabled?: boolean;
-    /**
      * The color of the button (based on Semantic UI colors).
      */
     color?: ButtonColorType | null | undefined;
@@ -112,6 +108,6 @@ export interface LabledButtonProps {
     size?: ButtonSizeType | null;
     icon?: string | null;
     position?: "left" | "right" | null;
-    label?: string | null;
+    text?: string | null;
     children: Snippet;
 }

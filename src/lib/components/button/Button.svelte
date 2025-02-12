@@ -3,7 +3,6 @@
 
     let {
         type = "button",
-        disabled = false,
         color = null,
         basic = false,
         inverted = false,
@@ -22,6 +21,8 @@
         onDoubleClick = null,
         children,
     }: ButtonProps = $props();
+
+    let disabled = state == "disabled";
 
     let classNames = [
         "ui",
@@ -51,14 +52,16 @@
 {#if href}
     <a
         class={classNames}
-        {href}
+        href={disabled ? "javascript:void(0)" : href}
         target={target || "_self"}
         role="button"
         aria-label={ariaLabel}
         onclick={onClick}
         ondblclick={onDoubleClick}
     >
-        {@render children()}
+        {#if children}
+            {@render children()}
+        {/if}
     </a>
 {:else}
     <button
@@ -70,6 +73,8 @@
         onclick={onClick}
         ondblclick={onDoubleClick}
     >
-        {@render children()}
+        {#if children}
+            {@render children()}
+        {/if}
     </button>
 {/if}

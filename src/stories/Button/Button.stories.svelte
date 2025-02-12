@@ -111,7 +111,7 @@
 <Story name="Size">
   <Button size="mini" >mini</Button>
   <Button size="tiny" >tiny</Button>
-  <Button size="small" ><small></small></Button>
+  <Button size="small" >small</Button>
   <Button size="medium" >medium</Button>
   <Button size="large" >large</Button>
   <Button size="big" >big</Button>
