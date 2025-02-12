@@ -5,6 +5,7 @@
     let {
         type = "button",
         disabled = false,
+        labeled = false,
         color = null,
         basic = false,
         inverted = false,
@@ -33,6 +34,7 @@
 
     customClass = [
         "icon",
+        labeled && "labeled",
         circular && "circular",
         customClass,
     ]

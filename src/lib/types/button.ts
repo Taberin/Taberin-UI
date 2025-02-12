@@ -113,4 +113,5 @@ export interface LabledButtonProps {
     icon?: string | null;
     position?: "left" | "right" | null;
     label?: string | null;
+    children: Snippet;
 }

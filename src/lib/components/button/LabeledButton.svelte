@@ -9,7 +9,7 @@
         basic = false,
         inverted = false,
         state = null,
-        size = "medium",
+        size = null,
         children,
     }: LabledButtonProps = $props();
 
@@ -18,6 +18,7 @@
         color,
         basic && "basic",
         inverted && "inverted",
+        label ? "" : "icon",
         state,
         size,
         "button",
@@ -31,17 +32,21 @@
 </script>
 
 <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
-<div class={`ui labeled ${icon?? icon} button`} tabindex="0">
+<div
+    class={`ui ${position == "right" ? "left" : ""} labeled  button`}
+    tabindex="0"
+>
     {#if position == "left"}
         <div class={classNames}>
-            <i class={`${icon} icon`}></i> {label}
+            <i class={`${icon} icon`}></i>
+            {label}
         </div>
     {/if}
     {@render children()}
     {#if position == "right"}
         <div class={classNames}>
-            <i class={`${icon} icon`}></i> {label}
+            <i class={`${icon} icon`}></i>
+            {label}
         </div>
     {/if}
 </div>
-

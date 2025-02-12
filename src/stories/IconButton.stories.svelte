@@ -47,6 +47,12 @@
   <IconButton icon="thumbs up" basic={true} position="right">Like</IconButton>
 </Story>
 
+<Story name="Labeled Icon">
+  <IconButton icon="pause" labeled={true}>Pause</IconButton>
+  <IconButton icon="right arrow" position="right" labeled={true}>Next</IconButton>
+  <IconButton icon="loading spinner" labeled={true}>Loading</IconButton>
+</Story>
+
 <Story name="Colored">
   <IconButton icon="bus" />
   <IconButton icon="car" color="primary" />
