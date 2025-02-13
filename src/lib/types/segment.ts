@@ -15,6 +15,7 @@ export interface SegmentProps {
     attached?: "attached" | "top attached" | "bottom attached" | null;
     padded?: "padded" | "very padded" | null;
     compact?: boolean | null;
+    clearing?: boolean | null;
     color?: SegmentColorType | null;
     emphasis?: SegmentEmphasisType | null;
     floated?: "left" | "right" | null;

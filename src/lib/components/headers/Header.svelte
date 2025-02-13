@@ -1,11 +1,12 @@
 <script lang="ts">
-    import type { HeaderType } from "../../../types/types.js";
+    import type { HeaderType } from "$lib/types";
 
     // Destructure props from $props()
     let {
         type = "page",
         size = "huge",
         level = "h1",
+        color = null,
         inverted = false,
         dividing = false,
         block = false,
@@ -13,6 +14,8 @@
         floated = null,
         aligned = null,
         customClass = "",
+        sub = null,
+        state = null,
         styles = "",
         children,
     }: HeaderType = $props();
@@ -20,7 +23,10 @@
     // Generate class names dynamically
     let classNames = [
         "ui",
+        color && color,
+        sub && "sub",
         size,
+        state && state,
         inverted && "inverted",
         dividing && "dividing",
         block && "block",

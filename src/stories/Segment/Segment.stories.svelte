@@ -1,5 +1,5 @@
 <script module>
-  import { Placeholder, Segment, Divider } from "$lib";
+  import { Placeholder, Segment, Divider, Button } from "$lib";
   import { defineMeta } from "@storybook/addon-svelte-csf";
   import { fn } from "@storybook/test";
 
@@ -205,6 +205,12 @@
   </Segment>
   <Segment emphasis="tertiary" inverted={true} color="red">
     <p>If you notice me you must be looking very hard.</p>
+  </Segment>
+</Story>
+
+<Story name="Clearing">
+  <Segment clearing={true}>
+    <Button floated="right">Floated</Button>
   </Segment>
 </Story>
 
