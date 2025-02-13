@@ -10,4 +10,5 @@ export interface PlaceholderProps {
     lines?: PlaceholderLineLengthType[];
     fluid?: boolean | null;
     inverted?: boolean | null;
+    image?: "square" | "rectangle" | null;
 }

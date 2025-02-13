@@ -10,19 +10,31 @@
         inverted = null,
         textAlignment = null,
         basic = false,
+        attached = null,
+        padded = null,
+        compact = null,
+        color = null,
+        emphasis = null,
+        floated = null,
         children,
     }: SegmentProps = $props();
 
     let classNames = [
         "ui",
+        emphasis && emphasis,
         textAlignment && `${textAlignment} aligned`,
+        attached && attached,
         raised && "raised",
         stacked && "stacked",
         piled && "piled",
         state && state,
+        color && color,
         inverted && "inverted",
         placeholder && "placeholder",
         basic && "basic",
+        compact && "compact",
+        padded && padded,
+        floated && `${floated} floated`,
         "segment",
     ]
         .filter(Boolean)

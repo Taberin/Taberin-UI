@@ -5,7 +5,7 @@
   
     // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
     const { Story } = defineMeta({
-      title: "Button/LabeledButton",
+      title: "Elements/LabeledButton",
       component: LabeledButton,
       tags: ["autodocs"],
       parameters: {
@@ -36,7 +36,8 @@
   
   <!-- More on writing stories with args: https://storybook.js.org/docs/writing-stories/args -->
   <Story name="Standard">
-    <LabeledButton label="Like" icon="heart">
+    <LabeledButton text="Like" icon="heart">
+        <!-- svelte-ignore a11y_invalid_attribute -->
         <a href="#" class="ui basic label">
             2,048
         </a>
@@ -45,6 +46,7 @@
 
   <Story name="Pointed">
     <LabeledButton label="Like" icon="heart" position="right">
+        <!-- svelte-ignore a11y_invalid_attribute -->
         <a href="#" class="ui basic right pointing label">
             2,048
         </a>
@@ -53,6 +55,7 @@
 
   <Story name="Icon Only">
     <LabeledButton icon="fork" position="right">
+        <!-- svelte-ignore a11y_invalid_attribute -->
         <a href="#" class="ui basic label">
             2,048
         </a>
@@ -61,11 +64,13 @@
 
   <Story name="Color and Basic">
     <LabeledButton icon="heart" color="red" label="like">
+        <!-- svelte-ignore a11y_invalid_attribute -->
         <a href="#" class="ui basic red left pointing label">
             1,048
         </a>
     </LabeledButton>
     <LabeledButton icon="fork" position="right" label="Forms" color="blue" basic={true}>
+        <!-- svelte-ignore a11y_invalid_attribute -->
         <a href="#" class="ui basic right pointing blue label">
             1,048
         </a>

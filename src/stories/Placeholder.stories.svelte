@@ -5,7 +5,7 @@
 
     // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
     const { Story } = defineMeta({
-        title: "Placeholder/Placeholder",
+        title: "Elements/Placeholder",
         component: Placeholder,
         tags: ["autodocs"],
         parameters: {
@@ -61,6 +61,20 @@
     <Segment>
         <Placeholder fluid={true} />
     </Segment>
+</Story>
+
+<Story name="Image">
+    <div class="ui card">
+        <div class="content">
+            <Placeholder image="square" />
+        </div>
+    </div>
+
+    <div class="ui card">
+        <div class="content">
+            <Placeholder image="rectangle" />
+        </div>
+    </div>
 </Story>
 
 <Story name="Inverted">

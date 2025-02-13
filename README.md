@@ -33,23 +33,24 @@ The following is a list of planned components based on Semantic UI. Completed co
 
 - ✅ **Button**: Buttons with various styles and sizes.
 - ✅ **IconButton**: Buttons with icons.
-- ⬜ **LabeledButton**: Button can appear alongside a label.
-- ⬜ **ButtonGroup**: Buttons in one group.
-- ✅ **Container**: Container limits content to a maximum width.
+- ✅ **LabeledButton**: Button can appear alongside a label.
+- ✅ **ButtonGroup**: Buttons in one group.
+- ⬜ **Container**: Container limits content to a maximum width.
 - ✅ **Divider**: Divider visually segments content into groups.
-- ✅ **Header**: Header provides a short summary of content.
-- ✅ **Image**: Image is a graphic representation of something.
-- ✅ **Loader**: Loading indicators for pages or specific elements.
+- ⬜ **Header**: Header provides a short summary of content.
+- ⬜ **Image**: Image is a graphic representation of something.
+- ⬜ **Loader**: Loading indicators for pages or specific elements.
 - ⬜ **Flag**: Flag is used to represent a political state.
-- ✅ **Input**: Text input fields with optional styles and icons.
-- ✅ **Message**: Message displays information that expplains nearby content.
+- ⬜ **Input**: Text input fields with optional styles and icons.
+- ⬜ **Message**: Message displays information that expplains nearby content.
 - ⬜ **Dropdown**: Dropdown menus with multiple options.
 - ⬜ **Checkbox**: Checkboxes with customizable styles.
 - ⬜ **Modal**: Modal dialog components.
 - ⬜ **Card**: Cards for displaying content like images, text, and buttons.
 - ⬜ **Menu**: Navigation menus with different styles.
 - ⬜ **Table**: Tables with headers, footers, and layout variations.
-- ⬜ **Loader**: Loading indicators for pages or specific elements.
+- ✅ **Placeholder**: A placeholder is used to reserves place for content that soon will appear in a layout.
+- ✅ **Segment**: A segment is used to create a grouping of related content.
 
 ---
 
